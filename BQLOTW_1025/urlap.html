@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Űrlap</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header id="fejlec" class="urlap">
+        HTML5 űrlap - Neptunkod
+    </header>
+
+    <section id="tartalom" class="urlap">
+        <form id="urlap" name="urlap" action="feldolgozo5_1.php" method="GET" target="_self">
+            Név: <input type="text" id="nev" name="nev" placeholder="Írd be a neved" autofocus autocomplete="off" required pattern="[a-zA-ZöüóőúáéíűÖÜÓŐÚÁÉŰÍ]{5-50}" />
+            PIN kód:  <input type="text" id="kod" name="kod" placeholder="Írd be a pinkódod" autocomplete="off" required pattern="[0-9]{4}"/>
+            <br/><br/>
+
+            Kedvenc gyümölcs: <input type="text" name="gyumolcs" list="gyumolcsok">
+
+
+            <datalist id="gyumolcsok">
+                <option value="dinnye">d</option>
+                <option value="banán"></option>
+                <option value="ananász"></option>
+                <option value="eper">250Ft/kg</option>
+                <option value="alma">180/kg</option>
+            </datalist>
+
+            <br/><br/>
+
+            Életkor: <input type="number" name="eletkor" min="10" max="80" style="width: 40px;">
+            <br/><br/>
+
+            Lábméret: <input type="number" name="labmeret" min="25" max="50" step="0.5" style="width: 60px;">
+            <br/><br/>
+            Önbizalom: &nbsp;&nbsp;&nbsp;0<input type="range" name="onbizalom" min="0" max="100" style="width: 300px;">100
+        </form>
+        <br><br><br>
+
+        <input type="submit" value="ELKÜLDÖM" form="urlap" formaction="feldolgozo5_1.php" formmethod="POST" />
+        &nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Elküldöm ellenörzés nélkül" form="urlap" formnovalidate formtarget="ujablak" />
+
+    </section>
+    <footer id="lablec" class="lablec">
+        Forrás:
+        <a href="http://html5doctor.com/html5-forms-introduction-and-nem-attributes" target="ujablak">
+            html5doctor
+        </a>
+
+        <br><br>
+
+        Formátumok: <a href="http://www.w3schools.com/js/js_regexp.asp" target="ujablak">w3schools</a>
+
+    </footer>
+
+</body>
+</html>

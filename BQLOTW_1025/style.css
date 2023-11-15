@@ -1,0 +1,30 @@
+article, section, aside, nav, header, footer{display: block;}
+
+.fejlec{
+    font-size: 18pt;
+    font-family: Hevletica;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.urlap{
+    padding: 30px;
+    font-size: 12pt;
+    font-family: Hevletica;
+    background: #ccffff;
+    width:500px;
+    height: 300px;
+    border-radious:10px;
+    box_shadow: 5px 5px 10px #888888;
+}
+
+.lablec{
+    width:560px;
+    font-size: 10px;
+    margin-top: 40px;
+    border-top: 3px #888888 double;
+    padding-top: 30px;
+    text-align:right;
+    font-family: Hevletica;
+}
