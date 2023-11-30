@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Audió lejátszása</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="fejlec" class="fejlec">
+        Audió (zene,hang) lejátszása
+    </header>
+        <section id="tartalom">
+            <audio id="zene" controls style="widt:800px">
+                <source src="media/movie.mp3" type="audio/mpeg" />
+                A böngésződ nem támogatja a HTML audió lejátszását.
+            </audio>
+
+            <audio id="effekt">
+                <source src="media/yes.mp3" type="audiompeg" />
+                A böngésződ nem támogatja a HTML audió lejátszását.
+            </audio>
+
+            <br><br><br>
+
+            <button onclick="playPause()"> Lejátszás / szünet</button>
+            &nbsp;&nbsp;&nbsp;
+            <button onclick="effektem.src=yes.mp3;effektem.play()">pozitív</button>
+            <button onclick="effektem.src='no.mp3';effektem.play()">neagtív</button>
+            <br/><br/>
+            &nbsp;&nbsp;&nbsp;
+            <button onclick="zenem.playbackRate=0.2">nagyon lassú</button>
+            <button onclick="zenem.playbackRate=0.5">lassú</button>
+            <button onclick="zenem.playbackRate=1">normál</button>
+            <button onclick="zenem.playbackRate=2">gyorsabb</button>
+            <button onclick="zenem.playbackRate=4">nagyon gyors</button>
+            <br/><br/>
+            <button onclick="alert(zenem.ended)">befejeződött-e</button>
+            <button onclick="alert(zenem.duration)">audió hossza (mp)</button>
+            <button onclick="alert(zenem.currentTime)">jelenlegi pozíció</button>
+            <button onclick="zenem.currentTime=90">ugrás másfél perchez</button>
+
+        </section>
+
+        <footer id="lablec" class="lablec">
+            <b>Forrás:</b>
+            <br><br>
+            <a href="http://www.w3schools.com/html/html5_audio.asp" target="ujablak">
+                w3schools html5 audio
+            </a>
+        </footer>
+        <script>
+            var zenem = document.getElementById("zene");
+            var effektem = document.getElementById("effekt");
+
+            zenem.onended = function (){
+                alert("VÉGE")
+            };
+
+            function playPause(){
+                if (zenem.paused)
+                    zenem.play();
+                else
+                    zenem.pause;
+            }
+        </script>
+
+</body>
+</html>
