@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zip_url="https://gtfsapi.mvkzrt.hu/gtfs/gtfs.zip"
-output_folder="/home/robert/Dokumentumok/BQLOTWSzgepArchGyak/SemTaskBQLOTW/ShellScript/GTFS"
+output_folder="/home/robert/Dokumentumok/BQLOTWSzgepArchGyak/SemTaskBQLOTW/2_Feladat/GTFS"
 
 if [ ! -d "$output_folder" ]; then
     mkdir "$output_folder"

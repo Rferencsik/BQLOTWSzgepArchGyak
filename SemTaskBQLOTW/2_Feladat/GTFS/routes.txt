@@ -1,6 +1,5 @@
 agency_id,route_id,route_short_name,route_long_name,route_type
 31,15074,1V,Tiszai pályaudvar - Felső-Majláth,0
-31,15143,1VP,Tiszai pályaudvar - Szent Anna tér,3
 31,15168,3A,Búza tér - Berzsenyi Dániel utca,3
 31,15170,34,Avas kilátó - Bodótető,3
 31,15172,8,Repülőtér - Hűtőház,3
