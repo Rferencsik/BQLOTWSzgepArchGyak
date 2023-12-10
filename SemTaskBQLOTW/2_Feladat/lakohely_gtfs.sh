@@ -38,7 +38,7 @@ fi
 touch lakohelyutvonal.txt
 output_file="lakohelyutvonal.txt"
 
-grep "$Szent Anna tér" "/home/robert/Dokumentumok/BQLOTWSzgepArchGyak/SemTaskBQLOTW/ShellScript/GTFS/routes.txt" >>  "$output_file"
+grep "$Szent Anna tér" "/home/robert/Dokumentumok/BQLOTWSzgepArchGyak/SemTaskBQLOTW/2_Feladat/GTFS/routes.txt" >>  "$output_file"
 # Ellenőrizzük, hogy a szűrés sikeres volt-e
 if [ $? -eq 0 ]; then
     echo "A szűrt eredmények ki lettek írva a $output_file fájlba."

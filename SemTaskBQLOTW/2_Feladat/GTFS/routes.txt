@@ -49,4 +49,4 @@ agency_id,route_id,route_short_name,route_long_name,route_type
 31,23905,935,Szondi György utca - Avas kilátó,3
 31,23906,20A,Miskolctapolca - Búza tér,3
 31,23907,21G,Szondi György utca - Újgyőri főtér,3
-31,24176,3ADV,,0
+31,24176,3ADV,Ádventi villamos,0
