@@ -1,23 +1,22 @@
 #!/bin/bash
 
+# Ellenőrizzük, hogy megadták-e a szükséges paramétert
 if [ "$#" -ne 1 ]; then
     printf "Használat: %s <forrásfájl>\n" "$0"
     exit 1
 fi
 
-forrásfájl="$1"
-cél="vizsgaidőszakra"
+forras="$1"
+cel="nem gondoltam a vizsgaidőszakra"
 
-
-if [ ! -e "$forrásfájl" ]; then
-    printf "Hiba: A megadott forrásfájl nem létezik: %s\n" "$forrásfájl"
+# Ellenőrizzük, hogy létezik-e a forrásfájl
+if [ ! -e "$forras" ]; then
+    printf "Hiba: A megadott forrásfájl nem létezik: %s\n" "$forras"
     exit 1
 fi
 
+# Cseréljük le a szövegeket és írjuk át az új fájlba a printf parancs segítségével
+printf "%s\n" "$(sed "s/happy/$cel/g" "$forras")" > out.txt
 
-while IFS= read -r sor; do
-    módosított_sor=$(printf "%s\n" "$sor" | sed 's/happy/vizsgaidőszakra/g')
-    printf "%s\n" "$módosított_sor"
-done < "$forrásfájl" > out.txt
+printf "A szöveg sikeresen átlett alakítva. Az eredmény az out.txt fájlban található.\n"
 
-printf "A szöveg sikeresen át lett alakítva. Az eredmény az out.txt fájlban található.\n"
